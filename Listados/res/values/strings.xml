@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Listados</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string-array name="datos">
+        <item >uno</item>
+        <item >dos</item>
+        <item >tres</item>
+        <item >cuatro</item>
+        <item >cinco</item>
+        <item >seis</item>
+        <item >siete</item>
+        <item >ocho</item>
+        <item >nueve</item>
+        <item >diez</item>
+        <item >once</item>
+        <item >doce</item>
+    </string-array>
+
+</resources>
