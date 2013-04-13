@@ -1,17 +1,97 @@
 package org.francho.app.holamundo;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
+	private static final String TAG = "Estados";
+	private ImageView image;
+	private EditText text;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-	R.
+
+		Button button = (Button) findViewById(R.id.button1);
+
+		image = (ImageView) findViewById(R.id.imageView1);
+		text = (EditText) findViewById(R.id.editText1);
+
+		if (savedInstanceState != null) {
+			CharSequence userText = savedInstanceState.getCharSequence("userText");
+			if (userText != null) {
+				text.setText(userText);
+			}
+		}
+
+		button.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(MainActivity.this, R.string.hello_world,
+						Toast.LENGTH_LONG).show();
+
+				if (image != null) {
+					image.setImageResource(R.drawable.hello);
+				}
+			}
+		});
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		CharSequence userText = text.getText();
+		outState.putCharSequence("userText", userText);
+		super.onSaveInstanceState(outState);
+	}
+
+	@Override
+	protected void onDestroy() {
+		Log.d(TAG, "onDestroy");
+		super.onDestroy();
+	}
+
+	@Override
+	protected void onPause() {
+		Log.d(TAG, "onPause");
+		super.onPause();
+	}
+
+	@Override
+	protected void onRestart() {
+		Log.d(TAG, "onRestart");
+		super.onRestart();
+	}
+
+	@Override
+	protected void onResume() {
+		Log.d(TAG, "onResume");
+
+		super.onResume();
+	}
+
+	@Override
+	protected void onStart() {
+		Log.d(TAG, "onStart");
+
+		super.onStart();
+	}
+
+	@Override
+	protected void onStop() {
+		Log.d(TAG, "onStop");
+
+		super.onStop();
 	}
 
 	@Override

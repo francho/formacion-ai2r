@@ -4,5 +4,5 @@
     <string name="app_name">Adios Mundo</string>
     <string name="menu_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
+	<string name="button">Go</string>
 </resources>

@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/francho/Devel/Formacion/formacion-ai2r.git/.metadata/.plugins/org.eclipse.jdt.core
+1839181145.index
+477822620.index
+3702792539.index
