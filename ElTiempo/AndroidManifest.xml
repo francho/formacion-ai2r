@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.francho.sample.eltiempo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.francho.sample.eltiempo.WeatherActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="org.francho.sample.eltiempo.DetailActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="org.francho.sample.eltiempo.ACTION_DETAIL" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="android.cursor.item/vnd.org.francho.sample.eltiempo.predictions"/>
+            </intent-filter>
+        </activity>
+        
+        <service android:name="org.francho.sample.eltiempo.services.AemetPredictionService">
+            <intent-filter>
+                <action android:name="org.francho.sample.eltiempo.AEMET_SERVICE"/>
+            </intent-filter>
+        </service>
+        
+        <provider android:name="org.francho.sample.eltiempo.contentprovider.AemetContentProvider" android:authorities="org.francho.sample.aemetprovider" android:exported="false"></provider>
+    </application>
+
+</manifest> 

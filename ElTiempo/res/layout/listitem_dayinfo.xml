@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView 
+        android:id="@+id/max_temp_deg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="º"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    
+    <TextView 
+        android:id="@+id/min_temp_deg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="º"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/max_temp_deg"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        />
+    
+     <TextView
+        android:id="@+id/max_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/max_temp_deg"    
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/min_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/max_temp" 
+        android:layout_alignTop="@id/min_temp_deg"
+        android:text="-"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
